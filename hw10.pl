@@ -19,7 +19,7 @@ sub minesweeper {
     
     foreach my $i (0..@{$matrix} - 1) {
         foreach my $j (0..@{$matrix->[0]} - 1) {
-            if($matrix->[$i][$j]) {
+            if($matrix->[$i][$j] eq 'true') {
                 if($j + 1 < @{$matrix->[$i]}) {
                     ++$result[$i][$j + 1];
                     if($i - 1 >= 0) {
@@ -134,26 +134,29 @@ sub chessBoardCellColor {
 #############################################
 # 24
 print "24\n";
-# print 'minesweeper([[true,false,false], 
-#             [false,true,false], 
-#             [false,false,false]]): ';
-# foreach my $row (minesweeper([['true','false','false'], 
-#             ['false','true','false'], 
-#             ['false','false','false']])) {
-#                 foreach($row) {
-#                     print $_, ' ';
-#                 }
-#             }
-print "\n";
+print 'minesweeper([[true,false,false], 
+            [false,true,false], 
+            [false,false,false]]): ';
+my $ref = minesweeper([['true','false','false'], 
+                      ['false','true','false'], 
+                      ['false','false','false']]);
+foreach my $row (@$ref) {
+    foreach(@$row) {
+        print $_, ' ';
+    }
+    print "\n";    
+}
+print "\n\n";
 
 #############################################
 # 25
 print "25\n";
-# print 'arrayReplace([1, 2, 1], 1, 3)';
-# foreach(arrayReplace([1, 2, 1], 1, 3)) {
-#     print $_, ' ';
-# }
-print "\n";
+print 'arrayReplace([1, 2, 1], 1, 3): ';
+my $ref = arrayReplace([1, 2, 1], 1, 3);
+foreach(@$ref) {
+    print $_, ' ';
+}
+print "\n\n";
 
 #############################################
 # 26
