@@ -124,8 +124,6 @@ sub delete_ith_digit {
     return $result;
 }
 
-#############################################
-# 52
 sub deleteDigit {
 	my ($n) = @_;
     
@@ -182,7 +180,7 @@ print 'lineEncoding("abcd"): ', lineEncoding("abcd"), "\n\n";
 #############################################
 # 50
 print "50\n";
-print 'chessKnight("a1"): ', chessKnight("a1", "c3"), "\n";
+print 'chessKnight("a1"): ', chessKnight("a1"), "\n";
 print 'chessKnight("c2"): ', chessKnight("c2"), "\n";
 print 'chessKnight("d4"): ', chessKnight("d4"), "\n";
 print 'chessKnight("g6"): ', chessKnight("g6"), "\n\n";
