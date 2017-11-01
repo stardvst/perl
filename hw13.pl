@@ -1,8 +1,6 @@
 #!/usr/bin/perl -w
 use strict;
 
-use List::Util qw/max/;
-
 #############################################
 # 46
 sub electionsWinners {
